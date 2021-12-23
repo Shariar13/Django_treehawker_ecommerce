@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+        name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>Login</title>
+    <!------ icon ------->
+    <link href="../2_statics/1_images/1_home/logo/Tree Hawk PNG (1).png" rel="icon">
+
+    <!------- external cdn ------->
+    <link rel="stylesheet" href="../2_statics/2_css/style.css">
+
+    <!------- bootstrap cdn ------->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!------- font awesome -------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+
+<body>
+    <!--Navbar-->
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <div class="container-fluid">
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span><i class="fas fa-bars"></i></span>
+                </button>
+                <a class="navbar-brand" href="{% url 'home' %}">
+                    <img class="logo-style" src="{% static '2_statics/1_images/1_home/logo/Tree Hawk PNG (1).png' %}"
+                        alt="Logo">
+                </a>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link margin-style " href="{% url 'home' %}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link margin-style" href="{% url 'about' %}">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link margin-style" href="{% url 'portfolio' %}">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link margin-style " href="{% url 'blog' %}">Blog</a>
+                        </li>
+                        <!--  <li class="nav-item">
+                              <input type="text" placeholder="Search">
+                          </li>-->
+                        <li class="nav-item">
+                            <a class="nav-link margin-style" href="{% url 'contact' %}">Contact Us</a>
+                        </li>
+
+                        {% if user.is_authenticated %}
+                        <li class="nav-item">
+                            <a class="nav-link margin-style" href="{% url 'my_garden' %}">
+                                Create Garden</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link margin-style" href="{% url 'signout' %}"><i class="far fa-user"></i>
+                                Logout</a>
+                        </li>
+                        {% else %}
+                        <li class="nav-item">
+                            <a class="nav-link margin-style" href="{% url 'signin' %}"><i class="far fa-user"></i>
+                                Login/Sign-Up</a>
+                        </li>
+                        {% endif %}
+
+
+                        <li class="nav-item">
+                            <a class="nav-link margin-style" style="font-size: 16px;" href="{% url 'cart' %}">Add To Cart <i
+                                    class="fas fa-shopping-cart"></i></a>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!--Navbar end-->
+
+    
+    <!-------------------- review section starts ---------------------->
+
+    <div class="container-fluid px-1 py-5 mx-auto">
+        <div class="row justify-content-center">
+            <div class="col-xl-7 col-lg-8 col-md-10 col-12 text-center mb-5">
+                <div class="card">
+                    <div class="row justify-content-left d-flex">
+                        <div class="col-md-4 d-flex flex-column">
+                            <div class="rating-box">
+                                <h1 class="pt-4">4.0</h1>
+                                <p class="">out of 5</p>
+                            </div>
+                            <div> <span class="fa fa-star star-active mx-1"></span> <span class="fa fa-star star-active mx-1"></span> <span class="fa fa-star star-active mx-1"></span> <span class="fa fa-star star-active mx-1"></span> <span class="fa fa-star star-inactive mx-1"></span> </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="rating-bar0 justify-content-center">
+                                <table class="text-left mx-auto">
+                                    <tr>
+                                        <td class="rating-label">Excellent</td>
+                                        <td class="rating-bar">
+                                            <div class="bar-container">
+                                                <div class="bar-5"></div>
+                                            </div>
+                                        </td>
+                                        <td class="text-right">123</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="rating-label">Good</td>
+                                        <td class="rating-bar">
+                                            <div class="bar-container">
+                                                <div class="bar-4"></div>
+                                            </div>
+                                        </td>
+                                        <td class="text-right">23</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="rating-label">Average</td>
+                                        <td class="rating-bar">
+                                            <div class="bar-container">
+                                                <div class="bar-3"></div>
+                                            </div>
+                                        </td>
+                                        <td class="text-right">10</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="rating-label">Poor</td>
+                                        <td class="rating-bar">
+                                            <div class="bar-container">
+                                                <div class="bar-2"></div>
+                                            </div>
+                                        </td>
+                                        <td class="text-right">3</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="rating-label">Terrible</td>
+                                        <td class="rating-bar">
+                                            <div class="bar-container">
+                                                <div class="bar-1"></div>
+                                            </div>
+                                        </td>
+                                        <td class="text-right">0</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="row d-flex">
+                        <div class=""> <img class="profile-pic" src="https://i.imgur.com/V3ICjlm.jpg"> </div>
+                        <div class="d-flex flex-column">
+                            <h3 class="mt-2 mb-0">Vikram jit Singh</h3>
+                            <div>
+                                <p class="text-left"><span class="text-muted">4.0</span> <span class="fa fa-star star-active ml-3"></span> <span class="fa fa-star star-active"></span> <span class="fa fa-star star-active"></span> <span class="fa fa-star star-active"></span> <span class="fa fa-star star-inactive"></span></p>
+                            </div>
+                        </div>
+                        <div class="ml-auto">
+                            <p class="text-muted pt-5 pt-sm-3">10 Sept</p>
+                        </div>
+                    </div>
+                    <div class="row text-left">
+                        <h4 class="blue-text mt-3">"An awesome activity to experience"</h4>
+                        <p class="content">If you really enjoy spending your vacation 'on water' or would like to try something new and exciting for the first time.</p>
+                    </div>
+                    <div class="row text-left">
+                        <div class="col-4">
+                            <img class="pic" src="https://i.imgur.com/kjcZcfv.jpg"> 
+                        </div>
+                         
+                        <div class="col-4"><img class="pic" src="https://i.imgur.com/SjBwAgs.jpg"> </div>
+                        <div class="col-4"><img class="pic" src="https://i.imgur.com/IgHpsBh.jpg"> </div>
+                         
+                    </div>
+                    <div class="row text-left mt-4">
+                        <div class="like mr-3 vote"> <img src="https://i.imgur.com/mHSQOaX.png"><span class="blue-text pl-2">20</span> </div>
+                        <div class="unlike vote"> <img src="https://i.imgur.com/bFBO3J7.png"><span class="text-muted pl-2">4</span> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-------------------- review section ends ---------------------->
+
+
+    </div>
+
+
+    <!--footer-->
+    <footer class="container-fluid footer" style="margin-top: 100px">
+        <div class="container">
+            <div class="row w-100 d-flex pt-5">
+                <div class="col-lg-3 col-md-6 col-sm-12 text-white">
+                    <img src="../2_statics/1_images/12_singUp/logo/logo.svg" alt="logo">
+
+                    <h3 class="mt-4 mb-3 text-success">About Us</h3>
+                    <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, id impedit! Amet,
+                        eius tempora! Doloribus illo optio sed soluta ullam?</p>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 text-white">
+
+
+                    <h3 class="mt-4 mb-3 text-success">Information</h3>
+                    <a class="link-decoration" href="../blog/index.html">Blogs</a>
+                    <hr>
+                    <a class="link-decoration" href="https://www.facebook.com/treehawker">Contacts</a>
+                    <hr>
+                    <a class="link-decoration" href="#">Mentors</a>
+                    <hr>
+                    <a class="link-decoration" href="#">Galleries</a>
+                    <hr>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 text-white">
+
+
+                    <h3 class="mt-4 mb-3 text-success">Helpful Links</h3>
+                    <a class="link-decoration" href="#">Services</a>
+                    <hr>
+                    <a class="link-decoration" href="#">Supports</a>
+                    <hr>
+                    <a class="link-decoration" href="#">Terms and Conditions</a>
+                    <hr>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 text-white">
+                    <h3 class="mt-4 mb-3 text-success">Need more info?</h3>
+                    <span><b>Email: </b><span class="text-success">treehawker21@gmail.com</span></span>
+                    <br>
+                    <h1 class="mt-3"></h1>
+                    <span class="mt-2"><b>Whatsapp : </b><span class="text-success">088********</span></span>
+                    <br>
+                    <span><b>Whatsapp : </b><span class="text-success">088********</span></span>
+                    <br>
+                    <h1 class="mt-3"></h1>
+                    <a class="link-decoration " href="https://www.facebook.com/treehawker"><i
+                            class="fab fa-facebook fs-4x "></i></a>
+                    <a class="link-decoration" href="#"><i class="fab fa-linkedin fs-4x"></i></a>
+                    <a class="link-decoration" href="#"><i class="fab fa-instagram fs-4x"></i></a>
+                    <h1 class="mt-3"></h1>
+
+
+
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <!--footer end-->
+</body>
+
+</html>

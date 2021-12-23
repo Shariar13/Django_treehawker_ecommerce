@@ -1,0 +1,137 @@
+
+.nav-border{
+    border-bottom: 3px solid #139545;
+}
+.logo-style{
+    height: 125px;
+    width: auto;
+}
+.margin-style{
+    margin-right: 1rem!important;
+    font-weight: bold!important;
+    font-size: 16px!important;
+    color: #8E8E8E!important;
+    transition: 0.4s!important;
+
+}
+.last-child{
+    border-radius: 20px;
+    border: 2px solid whitesmoke;
+    padding: 15px 20px;
+    background-color: #139545;
+
+
+
+}
+.margin-style:hover{
+    transform: scale(1.1)!important;
+   /* background-color: rgba(19, 149, 69, 0.8);*/
+    background-color: white!important;
+    color:#139545 !important;
+}
+
+
+
+.learn-style{
+    border: 2px solid #139545;
+    padding:  15px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #139545;
+    transition: 0.4s;
+
+}
+.learn-style:hover{
+    transform: scale(1.1);
+    background-color: #139545;
+    color: white;
+}
+
+.ms-size{
+    margin-left: 50px!important;
+}
+.bg-green{
+    background-color: #139545;
+}
+/*.fruit-tree-img{
+    min-height: 400px;
+    width: 80%;
+    margin-bottom: 10px;
+}*/
+/*
+about us strt
+*/
+.color-style{
+    color: #139545;
+}
+.about-learn-style{
+    /*border: 1px solid black;*/
+    /*padding: 20px;*/
+    border-radius: 10px;
+    /*background-color: #F9F9F9;*/
+}
+.lorem-icon-style{
+    margin-top: 10px;
+    padding-left: 20px;
+    font-family: Arial;
+    font-weight: bold;
+}
+.shetu{
+    padding-left: 65px;
+}
+.phn-img-10{
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 500px;
+    width: 100%;
+}
+/*about us end*/
+
+/*meet start*/
+.shetu-1{
+    padding-left: 1rem;
+
+}
+.image-size{
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+}
+.shetu-3{
+    background-color: #F5F5F5;
+    border-radius: 10px;
+    margin: 0 auto;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+    box-shadow: 0px 10px 13px -10px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+
+}
+.shetu-6{
+    background-color:white ;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+/*meet end*/
+
+.about-coustomer{
+    max-margin: -290px auto;
+    width: 80%;
+    top: 200px;
+}
+.footer{
+    min-height: 400px;
+    width: 100%;
+    background-color: #3D4043;
+}
+.link-decoration{
+    text-decoration: none;
+    color: white;
+
+
+}
+.fs-4x{
+    font-size: 50px;
+    text-align: center;
+    margin-right: 20px;
+}
