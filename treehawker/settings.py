@@ -12,7 +12,7 @@ SECRET_KEY = 'uhl#^7chzq&k2m9as80sqa=shx)3_g*r@uvah7@bf^^v&+1&9@'
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 
